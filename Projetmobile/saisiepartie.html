@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--place des viewport, feuilles de style et les librairies jquery-->
+<title>Saisir formulaire</title>
+<!--mise en place d'un viewport-->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- lier la feuille de style -->
+<link rel="stylesheet" href="libs/jquery.mobile-1.3.2.css"/>
+<!--definir les library jquery -->
+<script type="text/javascript" src="libs/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="libs/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+
+<!-- seconde page de l'application-->
+<div data-role="page" id="saisiepartie">
+<div data-role="header" >
+<a href="index.html" data-icon="back" data-iconpos="notext"></a>
+<h1>PartieI<h1>
+</div>
+
+<div data-role="navbar">
+<ul>
+<li> <a href="partie1.html">PartieI</a> </li>
+<li><a href="index.html">Accueil</a></li>
+<li></li>
+</ul>
+</div>
+
+<div data-role="content"> 
+    <form action="" method="POST">
+
+         <div data-role="fieldset" id="zonesaise">
+
+              <label for="txtnom"> Nom: </label>
+             <input type="text" name="txtnom" id="txtnom" required placeholder="Saississez votre nom" />
+
+               <label for="txtprenom"> Prenom: </label>
+             <input type="text" name="txtprenom" id="txtprenom" required placeholder="saisissez votre pr&eacute;nom" />
+
+              <label for="txtage"> Age: </label>
+          <input type="number" name="txtage" id="txtage" required placeholder="saisissez votre age" />
+
+         <label for="txtemail"> Email: </label>
+          <input type="email" name="txtemail" id="txtage" required placeholder="toto@toto.net" />
+
+              </div>
+
+             <div data-role="fieldset" id="zoneboutton">
+             <input type="submit" name="btnenreg" value="Enregistrer">
+              <input type="reset" name="btnannuler" value="Annuler">
+             </div>
+           
+            
+            
+     </form>
+ </div>
+
+
+
+<div data-role="footer"> copyright@equipe1 &copy;</div>
+
+</div>
+
+</body>
+
+</html>
+

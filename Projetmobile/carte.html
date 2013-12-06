@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--place des viewport, feuilles de style et les librairies jquery-->
+<title>Cartographie</title>
+<!--mise en place d'un viewport-->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- lier la feuille de style -->
+<link rel="stylesheet" href="libs/jquery.mobile-1.3.2.css"/>
+<!--definir les library jquery -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="libs/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="libs/jquery.mobile-1.3.2.min.js"></script>
+<script type="text/javascript" src="libs/jquery.ui.map.js"></script>
+
+</head>
+<body>
+<!-- seconde page de l'application-->
+          <div data-role="page" id="carto">
+            <div data-role="header" >
+              <a href="index.html" data-icon="back" data-iconpos="notext"></a>
+                 <h1>Cartographie<h1>
+              </div>
+
+           <div data-role="content">
+                 <div id="macarte" style="width:100; height: 250px">
+                       <script>
+                          $(document).ready(
+                              function() {
+                                var malocalisation= new google.maps.LatLng(20,-10);
+                                $('#macarte').gmap({'center': malocalisation, 'zoom': 10});
+                                $('#macarte').gmap('addMarker', {'position': malocalisation, 'bounds': true});
+                           }
+                         );
+                        </script>
+                    </div>
+
+<div data-role="footer"> copyright@equipe1 &copy;</div>
+
+</div>
+
+</body>
+
+</html>
+
